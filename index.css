@@ -1,0 +1,297 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    color:#ededed;
+    text-align: right;
+}
+
+.header{
+    background-color:black;
+    color:white;
+    border-color: #080808;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+
+.inner-header{
+    width:80%;
+    margin:auto;
+}
+
+.logo{
+    float: left;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.header-link{
+    float:right;
+    font-size:14px;
+    height: 50px;
+    padding: 15px 15px;
+    font-size:16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.content{
+    min-height: 600px;
+}
+
+.banner-image{
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(./img/back.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.inner-banner-image{
+    padding-top: 12%;
+    width:80%;
+    margin:auto;
+}
+
+.banner_content{
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    overflow:hidden;
+    margin-bottom: 12%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 660px;
+    border-radius: 10px;
+}
+.button{
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #FF5000;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+    -webkit-transition: all 0.5s;
+}
+.button:hover{
+    background: palevioletred;
+    color: black;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.items{
+    width: 30%;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    float:left;
+    margin-left:1%;
+}
+
+.thumbnail{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+
+.caption{
+    color:#000;
+    padding:0px 10px 10px;
+    text-align: center;
+}
+
+.footer{
+   background-color: #000;
+   color:#fff;
+   font-size:14px;
+   text-align: center;
+}
+
+.containerlogin {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assests/bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .containerlogin:after {
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+  }
+  /* =============================Content of fields===================== */
+  .contentlogin{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 370px;
+      transform: translate(-50%,-50%);
+      z-index: 1;
+      text-align: center;
+      padding: 60px 32px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  }
+  
+  .contentlogin header{
+      color: white;
+      font-size: 33px;
+      margin-bottom: 35px;
+      font-weight: 600;
+  }
+  /* =======================Fields i.e inside the container===================== */
+  .field{
+      position: relative;
+      height: 45px;
+      width: 100%;
+      display: flex;
+      background: rgba(255, 255, 255, 0.94);
+  }
+  
+  .field input{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #222;
+      font-size: 16px;
+     
+  }
+  
+  /* -----password hidden and show----- */
+  .show{
+    position: absolute;
+    right: 13px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .password:valid ~.show{
+    display: inline;
+  }
+  /* ------------------ICON------------ */
+  
+  
+  /* ----forgot password */
+  .forgotpass{
+  
+    margin: 10px 0px;
+    text-align: left;
+  }
+  
+  .forgotpass a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .forgotpass a:hover{
+    text-decoration: underline;
+  
+  }
+  /* ----------space between button and inputs---------- */
+  .space{
+      margin-top: 16px;
+  }
+  
+  input[type="submit"]{
+    background: #3498db;
+    border: 1px solid #2691d9;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  input[type="submit"]:hover{
+    background: #2691d9;
+  }
+  
+  /* ----or login part--- */
+  .login{
+    color: white;
+    margin: 20px 0px;
+  }
+  
+  .linkicon{
+    display: flex;
+    cursor: pointer;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+  .facebook, .instagram{
+    width: 100%;
+    height: 42px;
+    line-height: 45px;
+    margin-top: 10p;
+    margin-left: 10px;
+    border-radius: 2px;
+  }
+  .facebook{
+    background: #4267B2;
+    border: 1px solid #3e61a8;
+  
+  }
+  .instagram{
+    background: #e1306c;
+    border: 1px solid #df2060;
+  
+  }
+  
+  .linkicon span{
+    margin-left: 8px;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  .signup{
+    color: white;
+    font-size: 18px;
+  }
+  .signup a{
+    text-decoration: none;
+    color: #3498db;
+  }
+  
+  .signup a:hover{
+    text-decoration: underline;
+  
+  }
+
+  /* contact */
+  #gray{
+    background-color: #eeeeee;
+    color:#757575;
+    border: 1px solid #bdbdbd;
+    padding: 2em;
+}

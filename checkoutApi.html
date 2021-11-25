@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="LifeStyle Store India's faishon e-store."/>
+    <meta name="keywords" content="camera, watches, shirts"/>
+    <meta name="author" content="Pravin Singh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+<title>Lifestyle Store</title>
+<link rel="shortcut icon" href="./img/srtcticon.png" type="image/png" >
+
+
+
+<link  href="index.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+
+
+<body>
+    <div class="header">
+        <nav>
+        <div class="inner-header">
+            <div class="header-link"><a href="contactUS.html"> <span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a> </div>
+            <div class="logo"><a href="index.html"><span class="glyphicon glyphicon-sunglasses"></span> Lifestyle Store</a></div>
+            <div class="header-link"><a href="setting.html"><span class="glyphicon glyphicon-wrench"></span> Settings</a> </div>
+            <div class="header-link"><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a> </div>
+
+        </div>
+        </nav>
+    </div>
+    <div class="banner-image" style="height: 620px;margin-bottom: 0px;">
+        <div class="container">
+            <div class="row decor_bg">
+                <div class="col-md-6 col-md-offset-3">
+                    
+                    <center class='jumbotron'style='margin-top: 200px;background-color: rgba(0, 0, 0, 0.7);'><h2 style='color:#ff0000;'>Please complete your transaction!</h1><p>Extra 10% discount on using credit card.</p> <button id="rzp-button1" style="background-color: black;"><span> <b>CLICK HERE TO PAY</b></span></button></center>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_zGNRmUh7uvrDQV", // Enter the Key ID generated from the Dashboard
+    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "order_IJeEu5jCedh8f2", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name": "Gaurav Kumar",
+        "email": "gaurav.kumar@example.com",
+        "contact": "9999999999"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+    
+
+
+    
+    <footer class="footer">
+        Copyright&copy; Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000
+    </footer>
+   
+
+
+</body>
+</html>
